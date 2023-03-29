@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: KubenetesTest
+  name: KubenetesTest
+  namespace: 01-shopmaster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: KubenetesTest
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: KubenetesTest
+    spec:
+      containers:
+      - image: kubenetestest001
+        name: kubenetestest001
+        resources: {}
+status: {}
